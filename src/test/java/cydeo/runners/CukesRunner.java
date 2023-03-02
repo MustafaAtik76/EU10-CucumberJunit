@@ -9,13 +9,13 @@ import org.junit.runner.*;
                 //"pretty",
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber," +
-                        "plugin-prefix>:<goal",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber",
+
     },
         features = "src/test/resources/features",
         glue = "cydeo/step_definitions",
         dryRun = false,
-        tags = "",
+        tags = "@regression",
         publish = false
 
 )
