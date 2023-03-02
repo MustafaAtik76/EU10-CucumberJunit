@@ -9,7 +9,8 @@ import org.junit.runner.*;
                 //"pretty",
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
-                "me.jvt.cucumber.report.PrettyReports:target/cucumber",
+                "me.jvt.cucumber.report.PrettyReports:target/cucumber," +
+                        "plugin-prefix>:<goal",
     },
         features = "src/test/resources/features",
         glue = "cydeo/step_definitions",
