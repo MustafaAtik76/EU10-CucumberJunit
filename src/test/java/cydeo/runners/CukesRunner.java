@@ -15,7 +15,7 @@ import org.junit.runner.*;
         features = "src/test/resources/features",
         glue = "cydeo/step_definitions",
         dryRun = false,
-        tags = "@regression",
+        tags = "@Regression",
         publish = false
 
 )
