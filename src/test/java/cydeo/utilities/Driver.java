@@ -46,6 +46,7 @@ public class Driver {
                 switch statement will determine the case, and open the matching browser
             */
             switch (browserType){
+
                 case "chrome":
 
                     WebDriverManager.chromedriver().setup();
