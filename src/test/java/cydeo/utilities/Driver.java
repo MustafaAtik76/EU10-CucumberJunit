@@ -49,8 +49,13 @@ public class Driver {
 
                 case "chrome":
 
+                    ChromeOptions options = new ChromeOptions();
+                    Map<String, Object> prefs = new HashMap<String, Object>();
+                    prefs.put("intl.accept_languages", "en-GB");
+                    options.setExperimentalOption("prefs", prefs);
                     WebDriverManager.chromedriver().setup();
-                    driverPool.set(new ChromeDriver());
+                    //WebDriver driver = new ChromeDriver(options);
+                    driverPool.set(new ChromeDriver(options));
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
